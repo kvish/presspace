@@ -1,9 +1,27 @@
 Rails.application.routes.draw do
+  post 'listings/create'
+
+  get 'listings/update'
+
+  get 'listings/delete'
+
+  get 'listings/all'
+
+  get 'listings/ind'
+
+  get 'listings/index'
+
+  get 'listings/show'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  resources :listings
+
+  root 'listings#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
